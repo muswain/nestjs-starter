@@ -12,13 +12,6 @@ export interface Author {
     id: number;
     firstName?: Nullable<string>;
     lastName?: Nullable<string>;
-    posts?: Nullable<Nullable<Post>[]>;
-}
-
-export interface Post {
-    id: number;
-    title: string;
-    votes?: Nullable<number>;
 }
 
 export interface IQuery {

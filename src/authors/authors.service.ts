@@ -1,10 +1,13 @@
 import { Injectable } from '@nestjs/common';
+import { Author } from 'src/typings/graphql';
 
 @Injectable()
 export class AuthorsService {
-  async findOneById(id: number) {
+  async findOneById(id: number): Promise<Author> {
     return {
-      id: `test ${id}`,
+      id,
+      firstName: 'john',
+      lastName: 'Wick',
     };
   }
 }
